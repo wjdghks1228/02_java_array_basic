@@ -53,11 +53,14 @@ public class ArrayEx11_문제 {
 				
 			arr [ arrIndex ] = ranNum;
 			check [ ranNum ] = true;
+			System.out.println("[STEP " + (arrIndex+1) + "    생성숫자 :  " + ranNum +  " ]");
 			arrIndex ++;
 			System.out.println(Arrays.toString(check));
 			System.out.println(Arrays.toString(arr));
+			System.out.println("---------------------------------------------------------------");
 		}
 		System.out.println();
+		System.out.println("중복숫자 없는 배열 생성 완료");
 		System.out.println(Arrays.toString(arr));
 					
 	}
