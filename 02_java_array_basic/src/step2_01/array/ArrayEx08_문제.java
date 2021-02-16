@@ -1,5 +1,6 @@
 package step2_01.array;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /*
@@ -49,32 +50,31 @@ public class ArrayEx08_문제 {
 			}
 		}
 		// answer 출력
-		System.out.println("answer");
-		for (int i = 0; i < 5; i++) {
-			System.out.print("[");
-			System.out.print(answer[i] + "");
-			System.out.print("]");
-		}
-
-		System.out.println();
+		System.out.print("answer   ");
+//		for (int i = 0; i < 5; i++) {
+//			System.out.print("[");
+//			System.out.print(answer[i] + "");
+//			System.out.print("]");
+//		}
+		System.out.println(Arrays.toString(answer));
 
 		// hgd출력
-		System.out.println("hgd");
-		for (int i = 0; i < 5; i++) {
-			System.out.print("[");
-			System.out.print(hgd[i] + "");
-			System.out.print("]");
-		}
-
-		System.out.println();
+		System.out.print("hgd      ");
+//		for (int i = 0; i < 5; i++) {
+//			System.out.print("[");
+//			System.out.print(hgd[i] + "");
+//			System.out.print("]");
+//		}
+		System.out.println(Arrays.toString(hgd));
 
 		// 정오표출력
-		System.out.println("check");
-		for (int i = 0; i < 5; i++) {
-			System.out.print("[");
-			System.out.print(ox[i] + "");
-			System.out.print("]");
-		}
+		System.out.print("check    ");
+//		for (int i = 0; i < 5; i++) {
+//			System.out.print("[");
+//			System.out.print(ox[i] + "");
+//			System.out.print("]");
+//		}
+		System.out.println(Arrays.toString(ox));
 
 		System.out.println();
 		System.out.println("총점 : " + score);
