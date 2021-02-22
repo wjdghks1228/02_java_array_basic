@@ -10,46 +10,44 @@ import java.util.Scanner;
  * 
  */
 
-
 public class ArrayEx19_문제 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
-		
-		int[] arr = {10,20,0,0,0};
+
+		int[] arr = { 10, 20, 0, 0, 0 };
 		int elementCnt = 2;
-		int selectMenu = 0;
-		
+
 		while (true) {
-			
-			for (int i=0; i<elementCnt; i++) {
-				System.out.print(arr[i] + " ");
-			}
 			System.out.println();
-			
-			System.out.println("[1]추가");
-			System.out.print("메뉴 선택 : ");
-			selectMenu = scan.nextInt();
-			
-			if (selectMenu == 1) {
-				
-				System.out.print("추가 할 값 입력 : ");
-				int data = scan.nextInt();
-				
-				if (elementCnt == 5) {
-					System.out.println("더이상 추가 할 수 없습니다.");
-					
+			System.out.println("[메뉴]");
+			System.out.println("[1] 현재 배열 출력");
+			System.out.println("[2] 추가");
+			int sel  = scan.nextInt();
+			if( sel >= 3) {
+				System.out.println("없는 메뉴 입니다.");
+				continue;
+			}
+			if(sel == 1) {
+				for ( int i = 0 ;  i < elementCnt  ; i ++) {
+					System.out.print(arr[i] + " ");
+				}
+				continue;
+			}
+			if(sel == 2) {
+				if(elementCnt == 5) {
+					System.out.println("배열이 꽉찾습니다. 삭제후 다시 입력하세요");
 					continue;
 				}
-				
-				arr[elementCnt] = data;
-				elementCnt++;
-				
+				System.out.println("값을 입력하세요 : ");
+				int inputNum = scan.nextInt();
+				arr[elementCnt] = inputNum;
+				elementCnt ++ ;
 			}
-			
+				
 		}
-		
+
 	}
-	
+
 }

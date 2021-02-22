@@ -9,12 +9,10 @@ import java.util.Scanner;
  * 
  */
 
-
-
 public class ArrayEx20_문제 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
 		
 		int[] arr = {10, 20, 30, 40, 50};
@@ -58,7 +56,7 @@ public class ArrayEx20_문제 {
 			}
 
 		}
+
 		
 	}
-
 }

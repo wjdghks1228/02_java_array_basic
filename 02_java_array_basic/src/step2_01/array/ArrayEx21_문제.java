@@ -19,45 +19,45 @@ public class ArrayEx21_문제 {
 		int[] arr = {10, 20, 0, 0, 0};
 		int elementCnt = 2;
 		int selectMenu = 0;
-		
-		while(true) {
+		int log =  - 1 ;
+		while ( true ) {
+			if ( log == 1 ) {
+				System.out.println("현재 배열이 가득찬 상태 , 해결후 삽입 하세요 ");
+				break;
+			}
 			
-			for(int i=0; i<elementCnt; i++) {
-				System.out.print(arr[i] + " ");
+			//현재배열출력
+			for( int i = 0 ; i < elementCnt ; i ++) {
+				System.out.print(arr[ i ] + " ");
 			}
 			System.out.println();
 			
-			System.out.println("[3]삽입");
-			
-			System.out.print("메뉴 선택 : ");
-			selectMenu = scan.nextInt();
-			
-			if (selectMenu == 3) {
-				
-				if ( elementCnt == 5 ) {
-					System.out.println("더이상 삽입할 수 없습니다.");
-					break;
-				}
-				
-				System.out.print("삽입할 위치 입력 : ");
-				int idx = scan.nextInt();
-				
-				if (idx <0 || idx > elementCnt) continue;
-				
-				System.out.print("삽입할 값 입력 : ");
-				int data = scan.nextInt();
-				
-				for(int i=elementCnt; i>idx ; i--) {
-					arr[i] = arr[i-1];
-				}
-				
-				arr[idx] = data;
-				elementCnt++;
-				
+			//삽입할 위치
+			System.out.println("삽입할 위치를 입력하세요 : ");
+			if( elementCnt == 5 ) {
+				System.out.println("배열이 가득차 삽입할수가 없습니다.");
+				log = 1;
+				continue;
 			}
+			int plusValue = scan.nextInt();
 			
-		}
-
-
+			System.out.println("삽입할 값을 입력하세요 : ");
+			int inputValue  = scan.nextInt();
+			// 0  1  2  3   4  : index
+			// 1  2  3  4   5  : elementCnt
+			// 10 20 30 40     : 실제
+			for ( int i  = elementCnt ; i > plusValue; i -- 	) {
+				arr[ i ] = arr [ i - 1 ] ;
+			}
+			arr[ plusValue ] = inputValue;
+			elementCnt ++ ;
+			System.out.println("배열 출력");
+			System.out.println("--------------------------------------------------------");
+			for(int i = 0 ; i < elementCnt ; i++	) {
+				System.out.print(arr [ i ] + " ");
+			}
+			System.out.println();
+			System.out.println("--------------------------------------------------------");
+			}
 	}
 }
